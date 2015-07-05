@@ -1,0 +1,22 @@
+#see http://www.thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html for details
+
+
+#don't allow domainless queries e.g. google
+domain-needed
+
+#prevent queries for private addresses e.g. 192.168.x.x from leaving network
+bogus-priv
+
+#ensure dnsmasq does not listen on public interfaces
+#with foll. conf, it will listen on local loopback
+interface=vboxnet0 
+
+
+#upstream Name Servers - Google public dns, open dns
+server=8.8.8.8
+server=8.8.4.4
+server=208.67.220.220
+
+address=/server1/127.0.0.1
+address=/server2/127.0.0.1
+address=/<your-local-domain>/127.0.0.1
