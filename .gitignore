@@ -1,0 +1,3 @@
+self-cert/ssl.crt
+self-cert/ssl.key
+nexus/data
